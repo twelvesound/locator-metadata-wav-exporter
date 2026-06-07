@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.ablx
+*.log
+.DS_Store
+
+# Ableton SDK archives are required locally but should be downloaded from Ableton.
+vendor/*.tgz
+!vendor/.gitkeep
