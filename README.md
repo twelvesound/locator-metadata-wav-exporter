@@ -14,7 +14,7 @@ Ableton Live Extension that renders an Arrangement selection and writes WAV cue 
 - Uses the selected time range as the rendered WAV range.
 - Writes every locator inside that range as a WAV cue marker.
 - Writes each locator name into the WAV `LIST/adtl` labels.
-- Writes the marker WAV to the extension storage directory.
+- Writes the marker WAV to this extension's private storage folder.
 
 ## Use
 
@@ -25,6 +25,18 @@ Ableton Live Extension that renders an Arrangement selection and writes WAV cue 
 
 The Extension uses `renderPreFxAudio()`, so it renders the selected audio track pre-effects.
 The exported file path is printed to the extension log.
+
+## Output Location
+
+The exported WAV is saved in the extension's private storage folder. This is a per-extension folder managed by Ableton Live, not the same folder as your Live Set, Downloads folder, or Desktop.
+
+After exporting, check the extension log for a line like this:
+
+```txt
+Exported locator WAV: /path/to/render-locators.wav
+```
+
+That log line shows the exact file path to the rendered WAV.
 
 ## Setup
 
